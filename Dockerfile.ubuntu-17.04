@@ -1,0 +1,13 @@
+# Use sha256 here to get a fixed version
+FROM ubuntu:zesty-20170411
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+ENTRYPOINT []
+CMD []
+WORKDIR /
+
+RUN apt-get update && apt-get install -y systemd-sysv dbus policykit-1 busybox
+
+COPY init /
+
